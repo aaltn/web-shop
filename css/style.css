@@ -1,0 +1,228 @@
+body {
+  min-width: 900px;
+  margin: 0;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+
+/*laout*/
+  background: url("../pict/nerds-index.jpg") no-repeat center top;
+}
+
+b {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+}
+
+.clearfix::after {
+  content: "";
+
+  display: table;
+  clear: both;
+}
+
+.main-header {
+  position: relative;
+  margin-bottom: 80px;
+  padding-top: 27px;
+
+  /*layout*/
+  background-color: rgba(255, 0, 0, 0.2);
+
+}
+
+.container {
+  width: 880px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.main-navigation {
+  /*margin-top: 27px;*/
+
+}
+
+.main-navigation ul {
+  float: right;
+  margin: 0;
+  padding: 0;
+
+  font-size: 0;
+}
+
+.main-navigation li {
+  display: inline-block;
+  margin: 27px 23px;
+
+  vertical-align: top;
+
+  /*layout*/
+  /*background-color: rgba(255, 0, 0, 0.5);*/
+}
+
+.main-navigation li:last-child {
+  margin-right: 0;
+}
+
+.main-navigation a {
+  padding: 5px 0;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  border-bottom: 2px solid red;
+}
+
+.main-logo {
+
+}
+
+.cart a {
+  padding-left: 50px;
+
+}
+
+.slider {
+  position: relative;
+
+}
+
+.slide-paginator {
+  position: absolute;
+  top: 240px;
+  left: 395px;
+
+}
+
+.slide-1 {
+
+}
+
+.slide-2 {
+  display: none;
+}
+
+.slide-3 {
+  display: none;
+}
+
+.slide-content {
+  float: left;
+
+  padding-top: 46px;
+}
+
+.slide-content p {
+  margin: 19px 0;
+}
+
+.slide-picture {
+  float: right;
+  width: 340px;
+  height: 325px;
+}
+
+
+.slide-header {
+  margin-bottom: 5px;
+
+}
+
+.slide-picture {
+
+}
+
+.btn {
+
+}
+
+.services {
+  margin-bottom: 80px;
+
+  font-size: 15px;
+  line-height: 22px;
+
+  /*layout*/
+  background-color: rgba(255, 0, 0, 0.2);
+  min-height: 300px;
+}
+
+.services-item {
+  float: left;
+  width: 240px;
+  margin-right: 80px;
+
+}
+
+.services-item:last-child {
+  margin-right: 0;
+}
+
+.services-img {
+  margin-bottom: 2px;
+
+}
+
+.services-title {
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.about {
+  padding: 45px 0;
+
+  /*layout*/
+  background-color: rgba(255, 0, 0, 0.2);
+  min-height: 365px;
+
+}
+
+.about-item {
+
+}
+
+.about-left {
+  float: left;
+
+  width: 620px;
+
+}
+
+.about-right {
+  float: right;
+
+  width: 230px;
+
+}
+
+.about-title {
+
+}
+
+.clients {
+  padding: 27px 12px;
+
+  /*layout*/
+  background-color: rgba(255, 0, 0, 0.2);
+  /*min-height: 165px;*/
+
+}
+
+.clients-img {
+  float: left;
+  width: 210px;
+  margin-right: 110px;
+  /*padding-left: 12px;*/
+}
+
+.clients-img:last-child {
+  margin-right: 0;
+}
