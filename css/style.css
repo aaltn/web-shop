@@ -11,9 +11,9 @@ body {
   /*background: url("../pict/nerds-index.jpg") no-repeat center top;*/
 }
 
-body.catalog {
+body.catalog-page {
   /*laout*/
-    background: url("../pict/nerds-catalog.png") no-repeat center top;
+    /*background: url("../pict/nerds-catalog.png") no-repeat center top;*/
 }
 
 b {
@@ -84,7 +84,7 @@ hr {
 }
 
 .main-navigation a,
-.main-navigation ul span {
+.main-navigation span {
   padding: 5px 0;
 
   font-family: 'Roboto', "Arial", sans-serif;
@@ -99,7 +99,7 @@ hr {
 }
 
 .main-navigation .active a,
-.main-navigation .active span {
+.main-navigation .active span  {
   border-bottom: 2px solid #fb565a;
 }
 
@@ -107,13 +107,15 @@ hr {
   margin-left: 43px;
 }
 
-.cart a {
+.cart a,
+.cart span {
   position: relative;
 
   padding-left: 30px;
 }
 
-.cart a::after {
+.cart a::after,
+.cart span::after {
   content: "";
   position: absolute;
   top: 4px;
@@ -398,8 +400,8 @@ hr {
 
 .footer-promo {
   float: left;
-  width: 560px;
-  margin-left: 19px;
+  width: 562px;
+  margin-left: 18px;
 }
 
 .footer-promo p {
@@ -413,7 +415,6 @@ hr {
 
 /*Стили для внутренних страниц     */
 /*---------------------------------*/
-/*catalog.html*/
 .inner-page-title {
   padding: 54px 0 84px;
 
@@ -429,10 +430,378 @@ hr {
   text-transform: uppercase;
 }
 
+.inner-content {
+
+}
+
+/*страница "Каталог макетов"*/
+/*---------------catalog.html-------------------------*/
+.shop-filter {
+  float: left;
+  width: 240px;
+
+  color: #283136;
+
+  font-size: 18px;
+  text-transform: uppercase;
+  /*line-height: 30px;*/
+
+  /*layout*/
+  /*background-color: rgba(255, 0, 0, 0.2);*/
+}
+
+.shop-filter fieldset {
+  margin-bottom: 50px;
+  padding: 0;
+  border: none;
+}
+
+.shop-filter legend {
+
+  padding-bottom: 18px;
+}
+
+.price-filter {
+  position: relative;
+
+  width: 240px;
+  height: 80px;
+  margin-bottom: 14px;
+
+  background-color: #f1f1f1;
+  border-radius: 3px;
+
+  /*layout*/
+  /*background-color: rgba(255, 255, 0, 0.2);*/
+}
+
+.price-filter .left-slider,
+.price-filter .right-slider {
+  position: absolute;
+
+  width: 4px;
+  height: 4px;
+
+  background-color: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+
+  box-shadow: 0 2px 3px rgba(0, 1, 1, 0.8);
+  cursor: pointer;
+  z-index: 20;
+}
+
+.price-filter .left-slider {
+  top: 50%;
+  left: 0%;   /* left: 0% - 100% для управления положением слайдера*/
+
+  margin-top: -10px;
+  margin-left: -10px;
+}
+
+.price-filter .right-slider {
+  top: 50%;
+  left: 50%;  /* left: 0% - 100% для управления положением слайдера*/
+
+  margin-top: -10px;
+  margin-left: -10px;
+}
+
+.price-filter .progress-bar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 180px;
+  height: 2px;
+  margin-top: -1px;
+  margin-left: -90px;
+
+  background-color: #d7dcde;
+}
+
+.price-filter .bar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 50%;    /* width: 0% - 100%; для управления диапозоном*/
+  height: 2px;
+  margin-top: -1px;
+  margin-left: -90px;
+
+  background-color: #00ca74;
+}
+
+.shop-filter input[name="min-price"] {
+  margin-right: 16px;
+}
+
+.shop-filter input[name="min-price"],
+.shop-filter input[name="max-price"] {
+  width: 60px;
+  padding: 8px 10px;
+
+  text-align: center;
+
+  border: none;
+  border-radius: 3px;
+  outline: none;
+
+  background-color: #f1f1f1;
+
+  /*layout*/
+  /*background-color: rgba(255, 255, 0, 0.2);*/
+}
+
+.check-label {
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+  padding-left: 35px;
+
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: none;
+
+  cursor: pointer;
+}
+
+.check-label:last-child {
+  margin-bottom: 0;
+}
+
+.shop-filter input[type="radio"],
+.shop-filter input[type="checkbox"] {
+  display: none;
+}
+
+.check-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: block;
+  width: 18px;
+  height: 18px;
+
+  border: 2px solid #c1c1c1;
+  border-radius: 3px;
+}
+
+input[type="radio"] + .check-indicator {
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked + .check-indicator::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+
+  display: block;
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+  background-color: #c1c1c1;
+}
+
+input[type="checkbox"]:checked + .check-indicator::after,
+input[type="checkbox"]:checked + .check-indicator::before {
+  content: "";
+  position: absolute;
+
+  display: block;
+  width: 20px;
+  height: 4px;
+
+  background-color: #c1c1c1;
+  border-radius: 1px;
+}
+
+input[type="checkbox"]:checked + .check-indicator::before {
+  top: 3px;
+  left: 2px;
+
+  border: 2px solid #ffffff;
+  transform: rotate(-45deg);
+}
+
+input[type="checkbox"]:checked + .check-indicator::after {
+  top: 8px;
+  left: 0px;
+
+  width: 11px;
+
+  transform: rotate(45deg);
+}
+
+/*input[disabled] + .check-indicator {*/
+.check-label.disabled .check-indicator {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.check-label.disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+
+.catalog {
+  float: right;
+  width: 560px;
+  font-size: 0;
+
+  /*layout*/
+  /*background-color: rgba(255, 0, 0, 0.2);*/
+}
+
+.catalog-filer {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.catalog-filer a,
+.catalog-filer span {
+  padding: 1px 0;
+
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.catalog-filer a {
+  text-decoration: none;
+  color: #000000;
+  border-bottom: 1px dotted #00ca74;
+  opacity: 0.3;
+}
+
+.catalog-filer ul,
+.catalog-filer .sort {
+  margin: 0;
+  padding: 0;
+
+  font-size: 0;
+}
+
+.catalog-filer li {
+  display: inline-block;
+  margin-right: 40px;
+
+  vertical-align: top;
+
+  /*layout*/
+  /*background-color: rgba(255, 0, 0, 0.5);*/
+}
+
+.catalog-filer .sort {
+  position: absolute;
+  height: 0px;
+
+  border: 5px solid transparent;
+}
+
+.catalog-filer .descending {
+  right: 18px;
+  top: 4px;
+  border-top: 10px solid #c1c1c1;
+}
+
+.catalog-filer .ascending {
+  right: 1px;
+  top: 0;
+  border-bottom: 10px solid #c1c1c1;
+}
+
+.curent .descending {
+  border-top: 10px solid #00ca74;
+}
+
+.curent .ascending {
+  border-bottom: 10px solid #00ca74;
+}
+
+
+.catalog-item {
+  position: relative;
+
+  display: inline-block;
+  width: 240px;
+  margin-right: 80px;
+  margin-bottom: 75px;
+
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.catalog-item:nth-child(odd) {
+  margin-right: 0;
+}
+
+.item-head {
+  padding: 6px 12px;
+  font-size: 0;
+
+  background-color: #f1f1f1;
+  border-radius: 3px 3px 0 0;
+}
+
+.item-head div {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 7px;
+
+  vertical-align: middle;
+
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.item-description {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+
+  display: none;
+  width: 160px;
+  min-height: 163px;
+  padding: 37px 20px 0px;
+
+  text-align: center;
+  background-color: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 1, 1, 0.8);
+}
+
+.item-description h2 {
+  margin: 0;
+  margin-bottom: 0px;
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.item-description p {
+  margin: 0;
+}
+
+.paginator {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+
+.paginator li {
+  display: inline-block;
+  margin-right: 11px;
+}
 
 /*кнопки*/
 /*-------------------------------------------------------*/
-.btn {
+.btn,
+.paginator .curent {
   display: inline-block;
 
   padding: 6px 0 11px;
@@ -457,11 +826,11 @@ hr {
 }
 
 .slide-content .btn {
-  width: 240px;
+  min-width: 240px;
 }
 
 .services .btn {
-  width: 140px;
+  min-width: 140px;
 }
 
 .services .application-btn {
@@ -479,7 +848,7 @@ hr {
 }
 
 .footer-contacts .btn {
-  width: 204px;
+  min-width: 204px;
 }
 
 .social-btn {
@@ -507,6 +876,42 @@ hr {
 
 .social-btn-inst {
   background-position: 10px -209px;
+}
+
+.paginator .btn,
+.paginator .curent,
+.shop-filter .btn {
+  min-width: 37px;
+  padding: 8px 0 9px;
+
+  color: #000000;
+  background-color: #f1f1f1;
+  border-top: 3px solid #f1f1f1;
+}
+
+.paginator .curent {
+  min-width: 33px;
+  background-color: transparent;
+  border: 2px solid #f1f1f1;
+}
+
+.paginator .next {
+  min-width: 140px;
+}
+
+.shop-filter .btn {
+  min-width: 156px;
+  margin-top: 8px;
+}
+
+.item-description .btn {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+
+  min-width: 140px;
+  margin-left: -70px;
+  /*margin-bottom: 30px;*/
 }
 
 /*эффекты: наведения, нажатия и т.д.*/
@@ -542,7 +947,6 @@ hr {
   /*transition: background-color 0.5s;*/
 }
 
-
 .services .presentation-btn:hover {
   background-color: #d6ae2c;
   border-top: 3px solid #d6ae2c;
@@ -563,7 +967,6 @@ hr {
 
   /*transition: background-color 0.5s;*/
 }
-
 
 .services .presentation-btn:active {
   background-color: #c09b24;
@@ -611,4 +1014,78 @@ hr {
 
   transition: background-position 0.5s,
               background-color 0.5s;
+}
+
+.catalog-filer a:hover,
+.curent a {
+  color: #000000;
+  border-bottom: 1px solid #00ca74;
+  opacity: 1;
+}
+
+.catalog-filer .descending:hover {
+  border-top: 10px solid #b5b5b5;
+}
+
+.catalog-filer .ascending:hover {
+  border-bottom: 10px solid #b5b5b5;
+}
+
+.catalog-filer a:active {
+  color: #000000;
+  border-bottom: 1px solid transparent;
+  opacity: 1;
+}
+
+.catalog-filer .descending:active {
+  border-top: 10px solid #000000;
+}
+
+.catalog-filer .ascending:active {
+  border-bottom: 10px solid #000000;
+}
+
+.catalog-item:hover .item-description {
+  display: block;
+}
+
+.catalog-item:hover .item-head {
+  background-color: #797979;
+}
+
+.paginator .btn:hover,
+.shop-filter .btn:hover {
+  background-color: #e5e5e5;
+  border-top: 3px solid #e5e5e5;
+}
+
+.paginator .btn:active,
+.shop-filter .btn:active {
+  background-color: #d5d5d5;
+  border-top: 3px solid #b5b5b5;
+}
+
+.check-label:hover,
+.check-label:hover .check-indicator {
+  color: #000000;
+  border-color: #b5b5b5;
+}
+
+/*input[disabled] + .check-indicator {*/
+.check-label.disabled:hover .check-indicator {
+  border-color: #c1c1c1;
+  cursor: not-allowed;
+  /*opacity: 0.6;*/
+}
+
+.check-label.disabled:hover {
+  color: #283136;
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+
+input[type="checkbox"]:hover:checked + .check-indicator::after,
+input[type="checkbox"]:hover:checked + .check-indicator::before,
+input[type="radio"]:hover:checked + .check-indicator::after {
+  background-color: #b5b5b5;
 }
