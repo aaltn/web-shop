@@ -138,20 +138,66 @@ hr {
 
 .slide-paginator {
   position: absolute;
-  top: 240px;
-  left: 395px;
+  bottom: 20px;    /*top: 240px;*/
+  left: 50%;
+
+  width: 300px;
+  margin-left: -150px;
+  text-align: center;
 }
 
-.slide-1 {
+.slide-1,
+.slide-2,
+.slide-3,
+.slider input[type="radio"] {
+  display: none;
+}
+
+.slide-1 img {
+  padding-top: 25px;
+}
+
+.slide-2 img {
+  padding-top: 30px;
+  padding-left: 100px;
+}
+
+#slide1-btn:checked ~ .slide-1,
+#slide2-btn:checked ~ .slide-2,
+#slide3-btn:checked ~ .slide-3 {
   display: block;
 }
 
-.slide-2 {
-  display: none;
+.slide-paginator label {
+  position: relative;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin: 0 5px;
+
+  vertical-align: top;
+  background: #ffffff;
+  border: 5px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
-.slide-3 {
-  display: none;
+.slide-paginator label::after {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: -7px;
+  display: block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #c1c1c1;
+  border-radius: 50%;
+}
+
+#slide1-btn:checked ~ .slide-paginator label[for="slide1-btn"],
+#slide2-btn:checked ~ .slide-paginator label[for="slide2-btn"],
+#slide3-btn:checked ~ .slide-paginator label[for="slide3-btn"] {
+  background: #c1c1c1;
 }
 
 .slide-content {
@@ -172,10 +218,6 @@ hr {
 
 .slide-header {
   margin-bottom: 5px;
-}
-
-.slide-picture {
-
 }
 
 .services {
@@ -486,7 +528,7 @@ hr {
   border: 8px solid #ffffff;
   border-radius: 50%;
 
-  box-shadow: 0 2px 3px rgba(0, 1, 1, 0.8);
+  box-shadow: 0 2px 3px rgba(0, 1, 1, 0.3);
   cursor: pointer;
   z-index: 20;
 }
@@ -567,6 +609,11 @@ hr {
   cursor: pointer;
 }
 
+.slide-paginator .check-label {
+  display: inline-block;
+  vertical-align: top;
+}
+
 .check-label:last-child {
   margin-bottom: 0;
 }
@@ -593,7 +640,10 @@ input[type="radio"] + .check-indicator {
   border-radius: 50%;
 }
 
-input[type="radio"]:checked + .check-indicator::after {
+input[type="radio"]:checked + .check-indicator::after
+/*,
+#slide1-btn:checked ~ .slide-paginator label[for="slide1-btn"] */
+{
   content: "";
   position: absolute;
   top: 5px;
@@ -772,7 +822,7 @@ input[type="checkbox"]:checked + .check-indicator::after {
 
   text-align: center;
   background-color: #ffffff;
-  box-shadow: 0 0 15px rgba(0, 1, 1, 0.8);
+  box-shadow: 0 0 15px rgba(0, 1, 1, 0.3);
 }
 
 .item-description h2 {
@@ -1066,9 +1116,11 @@ input[type="checkbox"]:checked + .check-indicator::after {
 }
 
 .check-label:hover,
+.check-indicator:hover,
 .check-label:hover .check-indicator {
   color: #000000;
   border-color: #b5b5b5;
+  cursor: pointer;
 }
 
 /*input[disabled] + .check-indicator {*/
