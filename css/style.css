@@ -848,6 +848,113 @@ input[type="checkbox"]:checked + .check-indicator::after {
   margin-right: 11px;
 }
 
+
+
+/*всплывающие окна*/
+/*-------------------------------------------------------*/
+.modal-feedback-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  /*display: none;*/
+  width: 460px;
+  margin-left: -315px;
+  margin-top: -200px;
+  padding: 54px 90px 50px 80px;
+
+  color: #000000;
+
+  background: #ffffff;
+  box-shadow: 0 20px 40px rgba(0, 1, 1, 0.75);
+}
+
+.modal-close {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+
+  width: 40px;
+  height: 40px;
+
+  font-size: 0;
+
+  background-color: #fb565a;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+}
+
+.modal-close::after,
+.modal-close::before {
+  content: "";
+  position: absolute;
+  top:17px;
+  left: 6px;
+
+  display: block;
+  width: 28px;
+  height: 5px;
+
+  background-color: #ffffff;
+  transform: rotate(45deg);
+}
+
+.modal-close::before {
+  transform: rotate(-45deg);
+}
+
+.feedback-form {
+
+}
+
+.feedback-form label {
+  display: inline-block;
+
+  line-height: 18px;
+}
+
+.feedback-form label:nth-child(2) {
+  float: right;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  padding: 9px 14px;
+
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #000000;
+
+  border: 2px solid #d7dcde;
+  border-radius: 2px;
+  outline: none;
+
+}
+
+.feedback-form input {
+  width: 190px;
+  margin-top: 13px;
+  margin-bottom: 21px;
+}
+
+.feedback-form textarea {
+  width: 428px;
+  margin-top: 13px;
+  margin-bottom: 48px;
+  /*padding: 9px 16px;*/
+
+  resize: none;
+}
+
+.feedback-form .btn {
+  display: block;
+  width: 100%;
+}
+
+
 /*кнопки*/
 /*-------------------------------------------------------*/
 .btn,
