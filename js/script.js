@@ -53,3 +53,23 @@ window.addEventListener("keydown", function(event) {
     }
   }
 });
+
+
+// function initialize() {
+//   var mapOptions = {
+//     zoom: 15,
+//     center: new google.maps.LatLng(59.938953,30.322681),
+//     scrollwhell: false,
+//     disableDoubleClickZoom: true
+//   }
+//   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+//
+//   //var image = "../img/map-marker.png";
+//   var myLatLng = new google.maps.LatLng(59.938953,30.322681);
+//   var beachMarker = new google.maps.Marker({
+//     position: myLatLng,
+//     map: map,
+//     //icon: image
+//  });
+// }
+// google.maps.event.addDomListener(window, 'load', initialize);
