@@ -55,21 +55,23 @@ window.addEventListener("keydown", function(event) {
 });
 
 
-// function initialize() {
-//   var mapOptions = {
-//     zoom: 15,
-//     center: new google.maps.LatLng(59.938953,30.322681),
-//     scrollwhell: false,
-//     disableDoubleClickZoom: true
-//   }
-//   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-//
-//   //var image = "../img/map-marker.png";
-//   var myLatLng = new google.maps.LatLng(59.938953,30.322681);
-//   var beachMarker = new google.maps.Marker({
-//     position: myLatLng,
-//     map: map,
-//     //icon: image
-//  });
-// }
-// google.maps.event.addDomListener(window, 'load', initialize);
+// google maps
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 59.939147, lng: 30.320669},
+    zoom: 17,
+    scrollwheel: false
+  });
+  var markerImage = new google.maps.MarkerImage(
+    'img/map-marker.png',
+    new google.maps.Size(231,190),
+    new google.maps.Point(0,0),
+    new google.maps.Point(50,190)
+);
+  var marker = new google.maps.Marker({
+    position: {lat: 59.938837, lng: 30.323069},
+    icon:  markerImage,
+    map: map
+  });
+}
+// google.maps.event.addDomListener(window, 'load', initMap);

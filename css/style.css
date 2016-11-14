@@ -365,42 +365,36 @@ hr {
 }
 
 .main-footer {
-
+  position: relative;
 
   margin-top: 83px;
   padding-bottom: 66px;
 }
 
 .footer-map {
-  position: relative;
-
   height: 415px;
   margin-bottom: 75px;
-  /*padding: 88px 0;*/
 
-  background:#b5b5b5 url("../pict/--map.jpg") repeat center;
+  background:#b5b5b5 url("../pict/map.jpg") repeat center;
 }
 
-.footer-map > div {
+/*.footer-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}*/
+
+.footer-contacts {
   position: absolute;
   top: 88px;
   left: 50%;
   margin-left: -440px;
-}
 
-.footer-map iframe {
-  width: 100%;
-  height: 100%;
-  /*frameborder="0" */
-  border: 0;
-
-}
-
-.footer-contacts {
   width: 210px;
   padding: 25px 20px;
 
   background: #ffffff;
+  z-index: 1;
 }
 
 .footer-contacts .btn {
@@ -491,7 +485,7 @@ hr {
 .price-filter {
   width: 180px;
   height: 80px;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   padding: 0 30px;
 
   background-color: #f1f1f1;
@@ -557,12 +551,12 @@ hr {
 
 .shop-filter input[name="min-price"],
 .shop-filter input[name="max-price"] {
-  width: 60px;
+  width: 58px;
   padding: 8px 10px;
 
   text-align: center;
-
-  border: none;
+/*border:none;*/
+  border: 1px solid transparent;
   border-radius: 3px;
   outline: none;
 
@@ -1244,6 +1238,19 @@ input[type="radio"]:hover:checked + .check-indicator::after {
   background-color: #b5b5b5;
 }
 
+textarea:hover,
+input[type="text"]:hover,
+.shop-filter input[name="min-price"]:hover,
+.shop-filter input[name="max-price"]:hover {
+  border-color: #a2a9ac;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+.shop-filter input[name="min-price"]:focus,
+.shop-filter input[name="max-price"]:focus {
+  border-color: #56bffb;
+}
 
 
 /*-- анимация всплывающих окон --*/

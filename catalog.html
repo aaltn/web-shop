@@ -16,10 +16,10 @@
             <img src="img/main-logo.png" width="139" height="56" alt="Лого веб-студии">
           </a>
           <ul>
-            <li><a href="#">Студия</a></li>
-            <li><a href="#">Клиенты</a></li>
+            <li><a href="index.html">Студия</a></li>
+            <li><a href="index.html#clients">Клиенты</a></li>
             <li class="active"><span>Магазин</sapn></li>
-            <li><a href="#">Контакты</a></li>
+            <li><a href="#contacts">Контакты</a></li>
             <li class="cart"><a href="cart.html">Корзина</a></li>
           </ul>
         </nav>
@@ -207,17 +207,14 @@
     </main>
 
     <footer class="main-footer">
-      <div class="footer-map">
-        <div class="container">
-          <div class="footer-contacts">
-            <h2>Nerds Design Studio</h2>
-            <p>191186, Санкт-Петербург,
-              ул.&nbsp;Б.&nbsp;Конюшенная, д. 19/8</p>
-            <p>тел. +7 (812) 275-75-75</p>
-            <a  class="btn feedback" href="feedback-form.html">Напишите нам</a>
-          </div>
-        </div>
+      <div class="footer-contacts" id="contacts">
+        <h2>Nerds Design Studio</h2>
+        <p>191186, Санкт-Петербург,
+          ул.&nbsp;Б.&nbsp;Конюшенная, д. 19/8</p>
+        <p>тел. +7 (812) 275-75-75</p>
+        <a  class="btn feedback" href="feedback-form.html">Напишите нам</a>
       </div>
+      <div class="footer-map" id="map">  </div>
       <div class="container clearfix">
         <div class="footer-social">
           <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
@@ -260,5 +257,8 @@
     </div>
 
     <script src="js/script.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoxHaVYytmWo8Ct707lP4-A9HWyImneQc&callback=initMap" async defer></script>
+
   </body>
 </html>
