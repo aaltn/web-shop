@@ -1280,6 +1280,17 @@ input[type="text"]:focus,
       }
 }
 
+@keyframes expand {
+    from {
+        -webkit-transform: scale(0.4,0.1);
+        transform: scale(0.4,0.1);
+        }
+    to {
+      -webkit-transform: scale(1,1);
+      transform: scale(1,1);
+      }
+}
+
 @-webkit-keyframes shake {
 	0%,
 	100% {
